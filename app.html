@@ -1,0 +1,32 @@
+//App.js 파일 (App 컴포넌트를 export하는 파일) import logo from './logo.svg';
+import './App.css'; function App() { return (
+<div className="App">
+  <header className="App-header">
+    <img src="{logo}" className="App-logo" alt="logo" />
+    <p>Edit <code>src/App.js</code> and save to reload.</p>
+    <a
+      className="App-link"
+      href="https://reactjs.org"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Learn React
+    </a>
+  </header>
+</div>
+); } export default App; //여기 export된 App 함수를 위에서 import해서
+사용합니다. //자식 컴포넌트 (ChildComponent.js) function ChildComponent(){
+return
+<h3>나는 자식입니다.</h3>
+} export default ChildComponent; import ChildComponent from './ChildComponent';
+//부모 컴포넌트 (ParentComponent.js) function ParentComponent(){ return (
+<div>
+  <h3>나는 부모입니다.</h3>
+  <div>
+    <h1>내 자식을 소개합니다</h1>
+    <ChildComponent />
+    <ChildComponent />
+  </div>
+</div>
+) } export default ParentComponent
+
